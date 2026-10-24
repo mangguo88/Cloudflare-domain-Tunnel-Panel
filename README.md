@@ -30,6 +30,13 @@ Cloudflare Worker部署的domain-Tunnel 网页管理面板，用于管理多账�
 - **Telegram 上下线提醒**：状态**发生变化**才推送（上线一次、离线一次），可按隧道逐个开关（**默认关闭**）；支持多个接收者（私聊/群组/频道）、暂停/恢复推送。
 - **PWA**：可安装到桌面/手机主屏，带离线壳页面。
 
+## 面板展示
+
+<img width="1370" height="584" alt="image" src="https://github.com/user-attachments/assets/f60e3a10-a52a-4d8a-8358-bb7f86acb7b2" />
+<img width="1339" height="536" alt="image" src="https://github.com/user-attachments/assets/3bb2212f-bc22-42a7-bb3d-f5339a926656" />
+<img width="1360" height="430" alt="image" src="https://github.com/user-attachments/assets/c1a349ed-2979-4359-a8c1-1a56cfc7ca6d" />
+
+
 ## 快速部署（Cloudflare Dashboard）
 
 1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → 创建 Worker，把 `_worker.js` 内容全部粘贴进去，保存。
