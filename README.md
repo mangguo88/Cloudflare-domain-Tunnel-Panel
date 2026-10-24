@@ -16,7 +16,7 @@
 
 # Cloudflare domain-Tunnel 管理面板
 
-Cloudflare Worker部署的Argo tunnel网页管理面板，用于管理多账户下的 Argo Tunnel：新建/编辑/删除隧道、查看连接 Token、增删域名路由、查看在线状态，并可选地把隧道上线/离线事件通过 Telegram 推送提醒。
+Cloudflare Worker部署的domain-Tunnel 网页管理面板，用于管理多账户下的 domain与Tunnel：对托管的域名domain进行展示、查看域名绑定了哪些项目、对隧道Tunnel进行新建/编辑/删除隧道、查看连接 Token、增删域名路由、查看在线状态，并可选地把隧道上线/离线事件通过 Telegram 推送提醒。
 
 整个项目只有 **一个文件**：`_worker.js`（Worker 代码 + 内嵌管理页面，无需构建、无外部依赖）,之前部署了旧的版本，只需要复制_worker.js里的代码替换部署即可，其他的都不变
 
