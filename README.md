@@ -32,7 +32,7 @@ Cloudflare Worker部署的domain-Tunnel 网页管理面板，用于管理多账�
 
 ## 面板展示
 
-<img width="1370" height="584" alt="image" src="https://github.com/user-attachments/assets/f60e3a10-a52a-4d8a-8358-bb7f86acb7b2" />
+<img width="1732" height="476" alt="image" src="https://github.com/user-attachments/assets/e855fa0e-72d2-4c32-a17d-c12c4a733366" />
 <img width="1339" height="536" alt="image" src="https://github.com/user-attachments/assets/3bb2212f-bc22-42a7-bb3d-f5339a926656" />
 <img width="1360" height="430" alt="image" src="https://github.com/user-attachments/assets/c1a349ed-2979-4359-a8c1-1a56cfc7ca6d" />
 
