@@ -74,7 +74,8 @@ Cloudflare Worker部署的Argo tunnel网页管理面板，用于管理多账户�
 
 > 最小可用集其实只需：账户级 `Cloudflare Tunnel → Edit` + 区域级 `DNS → Read/Edit`、`Zone → Read`；多勾的项是无害的冗余。常见错误是只配了账户级的 Account DNS Settings/DNS View（管的是账户 DNS 全局设置，不是 Zone 里的 DNS 记录），会导致面板报"该域名已存在 DNS 记录"或删除隧道后 DNS 清理失败——**区域级的 `DNS → Edit` 必须有**。
 
-创建令牌图片展示
+
+## 创建令牌图片展示
 <img width="1640" height="843" alt="image" src="https://github.com/user-attachments/assets/3e8b12fa-8afb-40cf-ad9d-a8da0bcfe390" />
 <img width="1277" height="787" alt="image" src="https://github.com/user-attachments/assets/766fa369-5528-4c9c-b312-4034edd4e889" />
 <img width="1257" height="589" alt="image" src="https://github.com/user-attachments/assets/1923be3a-5d4d-42be-9ba8-9337d2324463" />
@@ -86,7 +87,7 @@ Cloudflare Worker部署的Argo tunnel网页管理面板，用于管理多账户�
 <img width="910" height="670" alt="image" src="https://github.com/user-attachments/assets/6fdf5d00-a238-4f37-9c46-32cee9a9077c" />
 <img width="1103" height="864" alt="image" src="https://github.com/user-attachments/assets/354ee277-6e3f-45da-b69d-6e5f7599823c" />
 
-注意：在面板增加多账号也是填入以上对应的令牌变量
+## 注意：在面板增加多账号也是填入以上对应的令牌变量
 
 ## 存储选择：D1（推荐）或 KV
 
@@ -98,6 +99,9 @@ KV 有每日写入次数限制且存在最终一致延迟（写后立刻读可�
    ```sql
    CREATE TABLE IF NOT EXISTS state (k TEXT PRIMARY KEY, v TEXT NOT NULL);
    ```
+
+<img width="1357" height="685" alt="image" src="https://github.com/user-attachments/assets/ee0105e1-9fe4-4df6-9b32-df0687c80cac" />
+
 
 3. Worker → Settings → Bindings → D1 Database，变量名填 **`TUNNEL_DB`**；
 4. 重新部署。未绑定 D1 时自动回退到 KV（`TUNNEL_STATE`），行为不变；两者同时绑定则 D1 优先。
