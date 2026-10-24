@@ -1,7 +1,7 @@
 # Cloudflare Tunnel 管理面板（修改版）
 
 > 本项目基于 [eooce/Cloudflare-Tunnel-Panel](https://github.com/eooce/Cloudflare-Tunnel-Panel) 修改，遵循原项目 GPL-3.0 许可证，LICENSE 文件保持原样。
-> 这是一个独立仓库，与上游不保持 fork 同步关系。
+> 感谢佬王。
 
 ## 本版主要改动（修1–修4）
 
@@ -73,6 +73,20 @@ Cloudflare Worker部署的Argo tunnel网页管理面板，用于管理多账户�
 | DNS & Zones | Zone Settings | Read + Edit |
 
 > 最小可用集其实只需：账户级 `Cloudflare Tunnel → Edit` + 区域级 `DNS → Read/Edit`、`Zone → Read`；多勾的项是无害的冗余。常见错误是只配了账户级的 Account DNS Settings/DNS View（管的是账户 DNS 全局设置，不是 Zone 里的 DNS 记录），会导致面板报"该域名已存在 DNS 记录"或删除隧道后 DNS 清理失败——**区域级的 `DNS → Edit` 必须有**。
+
+创建令牌图片展示
+<img width="1640" height="843" alt="image" src="https://github.com/user-attachments/assets/3e8b12fa-8afb-40cf-ad9d-a8da0bcfe390" />
+<img width="1277" height="787" alt="image" src="https://github.com/user-attachments/assets/766fa369-5528-4c9c-b312-4034edd4e889" />
+<img width="1257" height="589" alt="image" src="https://github.com/user-attachments/assets/1923be3a-5d4d-42be-9ba8-9337d2324463" />
+<img width="1479" height="911" alt="image" src="https://github.com/user-attachments/assets/9314e000-4749-4808-8bc6-9bd8a075e304" />
+<img width="1242" height="591" alt="image" src="https://github.com/user-attachments/assets/67070035-4fd9-44cf-95e7-7a96b04057d8" />
+<img width="1203" height="666" alt="image" src="https://github.com/user-attachments/assets/e9ddd190-e25d-4d51-8a1d-d527bf5ccdaa" />
+<img width="1368" height="516" alt="image" src="https://github.com/user-attachments/assets/c105016f-6e7a-4c8e-acae-8e18dde988dc" />
+<img width="1486" height="906" alt="image" src="https://github.com/user-attachments/assets/5e840344-e09c-4c7a-b408-514c8d1431f0" />
+<img width="910" height="670" alt="image" src="https://github.com/user-attachments/assets/6fdf5d00-a238-4f37-9c46-32cee9a9077c" />
+<img width="1103" height="864" alt="image" src="https://github.com/user-attachments/assets/354ee277-6e3f-45da-b69d-6e5f7599823c" />
+
+注意：在面板增加多账号也是填入以上对应的令牌变量
 
 ## 存储选择：D1（推荐）或 KV
 
