@@ -1,4 +1,4 @@
-// Cloudflare Worker: Cloudflare Tunnel 管理面板
+// Cloudflare Worker: Cloudflare domain-Tunnel 管理面板
 // 环境变量 (Settings → Variables and Secrets):
 //   CF_ACCOUNT_ID    账户 ID，创建token时显示
 //   CF_API_TOKEN     API 令牌, 权限: 
@@ -227,7 +227,7 @@ function pwaResponse(path) {
   if (path === "/manifest.json")
     return new Response(
       JSON.stringify({
-        name: "CF 隧道管理",
+        name: "Cloudflare domain-Tunnel 管理面板",
         short_name: "CF隧道",
         start_url: "/",
         scope: "/",
@@ -794,7 +794,7 @@ async function handleApi(request, env, path) {
       const bad = await botSelfErr(env, token, id);
       if (bad) return json({ error: bad }, 400);
       // 先真正发一条消息确认可用, 成功了再保存
-      const sent = await tgSend(env, id, "✅ Cloudflare 隧道管理: 提醒已连通", str(d.token) || meta.botToken);
+      const sent = await tgSend(env, id, "✅ Cloudflare domain-Tunnel 管理面板: 提醒已连通", str(d.token) || meta.botToken);
       if (!sent.ok) return json({ error: sent.error }, 400);
       if (!store(env)) return json(alertsPayload(env, meta));
       if (!isChatId(name)) await storePut(env, await chatKey(env, name), id);
@@ -1213,7 +1213,7 @@ const LOGIN_HTML = `<!doctype html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6821f">
-<title>登录 · Cloudflare 隧道管理面板</title>
+<title>登录 · Cloudflare domain-Tunnel 管理面板</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
 body{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:24px;
@@ -1260,7 +1260,7 @@ button.oks{opacity:1;background:linear-gradient(135deg,#17a35f,#2ecc7d);box-shad
 <div class="wrap">
   <form class="card" id="f" novalidate>
     <div class="logo">${CF_LOGO}</div>
-    <h1>Cloudflare 隧道管理面板</h1>
+    <h1>Cloudflare domain-Tunnel 管理面板</h1>
     <p class="sub">Tunnel 管理与 Telegram 上下线提醒</p>
     <div class="field">
       <span class="li">🔒</span>
@@ -1298,7 +1298,7 @@ const HTML = `<!doctype html>
 <link rel="apple-touch-icon" href="/icon-192.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Cloudflare 隧道管理面板</title>
+<title>Cloudflare domain-Tunnel 管理面板</title>
 <script>
 // 防闪白: 页面渲染前先把已保存的主题写到 html 根元素 (跟随系统 = 不设置 data-theme)
 (function(){try{
@@ -1488,7 +1488,7 @@ background:var(--side2);color:var(--sub);font-size:12px;line-height:1;cursor:poi
 </style></head><body>
 <div class="app">
   <aside class="sidenav" id="sidenav">
-    <div class="brand"><span class="ic">☁️</span><span>隧道管理面板</span></div>
+    <div class="brand"><span class="ic">☁️</span><span>Cloudflare domain-Tunnel 管理面板</span></div>
     <nav class="nav">
       <a data-v="dash" class="on"><span class="i">📊</span>仪表板</a>
       <a data-v="workers"><span class="i">🧩</span>Worker 管理</a>
