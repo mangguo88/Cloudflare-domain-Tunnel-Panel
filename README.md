@@ -1,4 +1,4 @@
-# Cloudflare Tunnel 管理面板（修改版）
+# Cloudflare domain-Tunnel 管理面板（修改版）
 
 > 本项目基于 [eooce/Cloudflare-Tunnel-Panel](https://github.com/eooce/Cloudflare-Tunnel-Panel) 修改，遵循原项目 GPL-3.0 许可证，LICENSE 文件保持原样。
 > 感谢佬王。
@@ -14,7 +14,7 @@
 
 ---
 
-# Cloudflare Tunnel 管理面板
+# Cloudflare domain-Tunnel 管理面板
 
 Cloudflare Worker部署的Argo tunnel网页管理面板，用于管理多账户下的 Argo Tunnel：新建/编辑/删除隧道、查看连接 Token、增删域名路由、查看在线状态，并可选地把隧道上线/离线事件通过 Telegram 推送提醒。
 
